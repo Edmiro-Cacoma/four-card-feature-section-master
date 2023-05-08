@@ -1,0 +1,120 @@
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --VeryDarkBlue: hsl(234, 12%, 34%);
+  --GrayishBlue: hsl(229, 6%, 66%);
+  --VeryLightGray: hsl(0, 0%, 98%);
+  --fontSize: 0.9rem;
+}
+
+html {
+  box-sizing: initial;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  margin: 10;
+  padding: 10px;
+  background-color: #eee;
+  font-size: var(--fontSize);
+  font-family: "Poppins", sans-serif;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.content h1 {
+  color: var(--GrayishBlue);
+}
+.content span {
+  color: var(--VeryDarkBlue);
+}
+.content p {
+  color: var(--GrayishBlue);
+}
+
+.grid-container {
+  display: grid;
+  margin: auto;
+  grid-gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-container .grid-item {
+  padding: 10px;
+  width: 350px;
+  height: 250px;
+  background-color: var(--VeryLightGray);
+  border-radius: 5px;
+}
+.grid-container .grid-item p {
+  font-size: var(--fontSize);
+  color: var(--GrayishBlue);
+  margin-top: 30px;
+}
+.grid-container .grid-item img {
+  max-width: 100%;
+}
+.grid-container .item1 {
+  border-top: 4px solid var(--cyan);
+}
+.grid-container .item1 img {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+.grid-container .item2 {
+  border-top: 4px solid var(--red);
+}
+.grid-container .item2 img {
+  position: absolute;
+  left: 57%;
+  bottom: 15%;
+}
+.grid-container .item3 {
+  border-top: 4px solid var(--blue);
+}
+.grid-container .item3 img {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+.grid-container .item4 {
+  border-top: 4px solid var(--orange);
+  grid-column-start: 2;
+}
+.grid-container .item4 img {
+  position: absolute;
+  right: 37%;
+  bottom: -35%;
+}
+.grid-container .item1,
+.grid-container .item3 {
+  position: relative;
+  top: 50%;
+}
+
+.attribution {
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--VeryDarkBlue);
+  font-size: var(--fontSize);
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,134 @@
+:root {
+    //primary
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+
+    //Neutral
+
+    --VeryDarkBlue: hsl(234, 12%, 34%);
+    --GrayishBlue: hsl(229, 6%, 66%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+
+    //fontSize
+    --fontSize: 0.9rem;
+}
+
+html {
+    box-sizing: initial;
+    font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    margin: 10;
+    padding: 10px;
+    background-color: #eee;
+    font-size: var(--fontSize);
+    font-family: "Poppins", sans-serif;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 60px;
+
+    h1 {
+        color: var(--GrayishBlue);
+    }
+    span {
+        color: var(--VeryDarkBlue);
+    }
+
+    p {
+        color: var(--GrayishBlue);
+    }
+}
+
+.grid-container {
+    display: grid;
+    margin: auto;
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+
+    .grid-item {
+        padding: 10px;
+        width: 350px;
+        height: 250px;
+        background-color: var(--VeryLightGray);
+        border-radius: 5px;
+
+        p {
+            font-size: var(--fontSize);
+            color: var(--GrayishBlue);
+            margin-top: 30px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+    .item1 {
+        border-top: 4px solid var(--cyan);
+
+        img {
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+        }
+    }
+
+    .item2 {
+        img {
+            position: absolute;
+            left: 57%;
+            bottom: 15%;
+        }
+        border-top: 4px solid var(--red);
+    }
+
+    .item3 {
+        border-top: 4px solid var(--blue);
+        img {
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+        }
+    }
+
+    .item4 {
+        img {
+            position: absolute;
+            right: 37%;
+            bottom: -35%;
+        }
+        border-top: 4px solid var(--orange);
+        grid-column-start: 2;
+    }
+
+    .item1,
+    .item3 {
+        position: relative;
+        top: 50%;
+    }
+}
+.attribution {
+    text-align: center;
+}
+.attribution a {
+    color: var(--VeryDarkBlue);
+    font-size: var(--fontSize);
+    text-decoration: none;
+}
